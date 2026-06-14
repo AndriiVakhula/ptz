@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"npm run type-check 2>&1\",\"description\":\"Re-run type-check after fixes\"}",
+  "error": "Exit code 1\n\n> telezip-parse@0.0.0 type-check\n> vue-tsc --build\n\nerror TS5033: Could not write file '/Users/andriivakhula/Projects/osint/telezip-parse/node_modules/.tmp/tsconfig.node.tsbuildinfo': EACCES: permission denied, mkdir '/Users/andriivakhula/Projects/osint/telezip-parse/node_modules/.tmp'.\nerror TS5033: Could not write file '/Users/andriivakhula/Projects/osint/telezip-parse/node_modules/.tmp/tsconfig.app.tsbuildinfo': EACCES: permission denied, mkdir '/Users/andriivakhula/Projects/osin...",
+  "timestamp": "2026-06-13T09:47:06.106Z",
+  "retry_count": 1
+}

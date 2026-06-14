@@ -1,0 +1,336 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1781452858452,
+  "projectRoot": "/Users/andriivakhula/Projects/osint/telezip-parse",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": "^20.19.0 || >=22.12.0",
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "vue",
+        "version": "beta",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "8.0.8",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": "Node.js 20.19.0||22.12.0"
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "run-p type-check \"build-only {@}\" --",
+      "preview": "vite preview",
+      "build-only": "vite build",
+      "type-check": "vue-tsc --build",
+      "lint": "run-s lint:*",
+      "lint:oxlint": "oxlint . --fix",
+      "lint:eslint": "eslint . --fix --cache",
+      "format": "oxfmt src/"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 3,
+      "lastAccessed": 1781452858442,
+      "keyFiles": [
+        "data.json",
+        "favicon.ico",
+        "index.html"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1781452858442,
+      "keyFiles": [
+        "data.json",
+        "favicon.ico"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1781452858444,
+      "keyFiles": [
+        "App.vue",
+        "main.ts"
+      ]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 7,
+      "lastAccessed": 1781452858445,
+      "keyFiles": [
+        "index-Bq8yEK8j.js",
+        "index-DBS6QJFu.css",
+        "primeicons-C6QP2o4f.woff2"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1781452858446,
+      "keyFiles": [
+        "main.css"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 5,
+      "lastAccessed": 1781452858447,
+      "keyFiles": [
+        "CardModal.vue",
+        "MessageCard.vue",
+        "MessageTable.vue"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 1,
+      "lastAccessed": 1781452858447,
+      "keyFiles": [
+        "supabase.ts"
+      ]
+    },
+    "src/types": {
+      "path": "src/types",
+      "purpose": "Type definitions",
+      "fileCount": 1,
+      "lastAccessed": 1781452858448,
+      "keyFiles": [
+        "message.ts"
+      ]
+    },
+    "src/utils": {
+      "path": "src/utils",
+      "purpose": "Utility functions",
+      "fileCount": 0,
+      "lastAccessed": 1781452858448,
+      "keyFiles": []
+    },
+    "src/views": {
+      "path": "src/views",
+      "purpose": "View templates",
+      "fileCount": 2,
+      "lastAccessed": 1781452858448,
+      "keyFiles": [
+        "ParserView.vue",
+        "SavedView.vue"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/components/MessageCard.vue",
+      "accessCount": 27,
+      "lastAccessed": 1781453918842,
+      "type": "file"
+    },
+    {
+      "path": "src/components/MessageTable.vue",
+      "accessCount": 23,
+      "lastAccessed": 1781453181737,
+      "type": "file"
+    },
+    {
+      "path": "src/App.vue",
+      "accessCount": 20,
+      "lastAccessed": 1781377514521,
+      "type": "file"
+    },
+    {
+      "path": "src/composables/useMessages.ts",
+      "accessCount": 17,
+      "lastAccessed": 1781347878765,
+      "type": "file"
+    },
+    {
+      "path": "src/components/TelegramEmbed.vue",
+      "accessCount": 17,
+      "lastAccessed": 1781453171961,
+      "type": "file"
+    },
+    {
+      "path": "src/components/CardModal.vue",
+      "accessCount": 16,
+      "lastAccessed": 1781381770459,
+      "type": "file"
+    },
+    {
+      "path": "src/main.ts",
+      "accessCount": 9,
+      "lastAccessed": 1781377524449,
+      "type": "file"
+    },
+    {
+      "path": "src/assets/main.css",
+      "accessCount": 7,
+      "lastAccessed": 1781345452278,
+      "type": "file"
+    },
+    {
+      "path": "src/types/message.ts",
+      "accessCount": 4,
+      "lastAccessed": 1781346788270,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 3,
+      "lastAccessed": 1781345101533,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 3,
+      "lastAccessed": 1781345882323,
+      "type": "file"
+    },
+    {
+      "path": "env.d.ts",
+      "accessCount": 3,
+      "lastAccessed": 1781376924257,
+      "type": "file"
+    },
+    {
+      "path": "src/composables/useSavedPosts.ts",
+      "accessCount": 3,
+      "lastAccessed": 1781380633678,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/supabase.ts",
+      "accessCount": 3,
+      "lastAccessed": 1781380767677,
+      "type": "file"
+    },
+    {
+      "path": "src/views/SavedView.vue",
+      "accessCount": 3,
+      "lastAccessed": 1781453171346,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "accessCount": 2,
+      "lastAccessed": 1781343445638,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 2,
+      "lastAccessed": 1781343512758,
+      "type": "file"
+    },
+    {
+      "path": "src/views/ParserView.vue",
+      "accessCount": 2,
+      "lastAccessed": 1781453171005,
+      "type": "file"
+    },
+    {
+      "path": "src/components/TheWelcome.vue",
+      "accessCount": 1,
+      "lastAccessed": 1781343433532,
+      "type": "file"
+    },
+    {
+      "path": "src/components/WelcomeItem.vue",
+      "accessCount": 1,
+      "lastAccessed": 1781343433741,
+      "type": "file"
+    },
+    {
+      "path": "src/components/HelloWorld.vue",
+      "accessCount": 1,
+      "lastAccessed": 1781343434123,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1781343445856,
+      "type": "file"
+    },
+    {
+      "path": "eslint.config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1781343451803,
+      "type": "file"
+    },
+    {
+      "path": "src/assets/base.css",
+      "accessCount": 1,
+      "lastAccessed": 1781343554573,
+      "type": "file"
+    },
+    {
+      "path": ".env.example",
+      "accessCount": 1,
+      "lastAccessed": 1781376938665,
+      "type": "file"
+    },
+    {
+      "path": "src/router/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1781377416357,
+      "type": "file"
+    },
+    {
+      "path": "src/components/TagInput.vue",
+      "accessCount": 1,
+      "lastAccessed": 1781381436948,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

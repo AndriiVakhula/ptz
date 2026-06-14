@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"ls .omc/plans/ .omc/specs/ .omc/autopilot/ 2>/dev/null && echo \\\"---\\\" && ls .omc/state/ 2>/dev/null\",\"description\":\"Check for existing autopilot specs, plans, and state\"}",
+  "error": "Exit code 1\n.omc/autopilot/:",
+  "timestamp": "2026-06-11T19:03:51.629Z",
+  "retry_count": 1
+}

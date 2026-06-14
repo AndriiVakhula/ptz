@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "entries": {
+    "466399dafa2d20f60587180bad0a07358eb7f2bce724df0ff682f038ad33f5ad": {
+      "last_emitted_at_ms": 1781345094692,
+      "message": "Read multiple files in parallel when possible for faster analysis."
+    },
+    "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
+      "last_emitted_at_ms": 1781345062218,
+      "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
+    },
+    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
+      "last_emitted_at_ms": 1781345005511,
+      "message": "Verify changes work after editing. Test functionality before marking complete."
+    },
+    "1bb6914bc42b891c26d46c8ae2fd4f44071f59862e89dc550f4c82877b700216": {
+      "last_emitted_at_ms": 1781344052545,
+      "message": "The boulder never stops. Continue until all tasks complete."
+    },
+    "00cb8b1db95d97785f6cc591be0fe7bca5d02acb43df65b92a65664bf831b80c": {
+      "last_emitted_at_ms": 1781343423128,
+      "message": "Spawning agent: Explore (inherit) | Task: Check for existing plans and state files"
+    },
+    "f28fa0e824f06ecc81a7599a176770040391c45c9ad3e030defa5e54e2bd0d90": {
+      "last_emitted_at_ms": 1781343420848,
+      "message": "Spawning agent: Explore (inherit) | Task: Explore project structure and identify components"
+    }
+  },
+  "updated_at": "2026-06-13T10:04:54.692Z"
+}
