@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import Card from 'primevue/card'
 import Button from 'primevue/button'
 import type { MessageRow } from '../composables/useMessages'
@@ -7,15 +6,15 @@ import { useSavedPosts } from '../composables/useSavedPosts'
 import TagInput from './TagInput.vue'
 import TelegramEmbed from './TelegramEmbed.vue'
 
-const props = defineProps<{ row: MessageRow; index: number }>()
-defineEmits<{ expand: [] }>()
+const props = defineProps<{ row: MessageRow; index: number; expanded: boolean }>()
+defineEmits<{ expand: []; toggleExpand: [] }>()
 
 const { isSaved, isPending, toggle } = useSavedPosts()
 
 // Collapsed: the card is clipped to a fixed height (overflow hidden, no inner
-// scrollbar). The expand button flips it to its natural height with overflow
-// visible so the full post shows in place.
-const expanded = ref(false)
+// scrollbar). Expanding flips it to its natural height in place. The expanded
+// flag is owned by the parent (keyed by messageUrl) so it survives the
+// VirtualScroller recycling card instances as the list scrolls.
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleString('uk-UA', {
@@ -33,6 +32,7 @@ function postSlug(messageUrl: string): string {
 </script>
 
 <template>
+  <div class="relative">
   <Card
     class="animate-card-in"
     :class="expanded ? 'h-auto overflow-visible' : 'h-[600px] overflow-hidden'"
@@ -51,15 +51,6 @@ function postSlug(messageUrl: string): string {
           :loading="isPending(row.messageUrl)"
           :title="isSaved(row.messageUrl) ? 'Remove from saved' : 'Save post'"
           @click.stop="toggle(props.row)"
-        />
-        <Button
-          :icon="expanded ? 'pi pi-chevron-up' : 'pi pi-chevron-down'"
-          severity="secondary"
-          variant="text"
-          size="small"
-          rounded
-          :title="expanded ? 'Collapse' : 'Expand'"
-          @click.stop="expanded = !expanded"
         />
         <Button
           icon="pi pi-external-link"
@@ -87,4 +78,15 @@ function postSlug(messageUrl: string): string {
       <TelegramEmbed :post="postSlug(row.messageUrl)" />
     </template>
   </Card>
+
+  <Button
+    :icon="expanded ? 'pi pi-chevron-up' : 'pi pi-chevron-down'"
+    severity="secondary"
+    rounded
+    size="small"
+    class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 shadow-md"
+    :title="expanded ? 'Collapse' : 'Expand'"
+    @click.stop="$emit('toggleExpand')"
+  />
+  </div>
 </template>
